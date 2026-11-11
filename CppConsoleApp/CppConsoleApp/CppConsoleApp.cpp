@@ -2,54 +2,17 @@
 //
 
 #include <iostream>
-
-namespace v0 {
-
-    struct A {
-        int a{1};
-    };
-
-    struct B {
-        int b{2};
-    };
-
-    struct C {
-        int c{3};
-    };
-
-}
-
-namespace v1 {
-    using namespace v0;
-
-    struct B {
-        int b{21};
-        float f{ 2.0f };
-    };
-
-    struct D {
-        int d{};
-    };
-
-}
-
-namespace v2 {
-    using namespace v1;
-
-    struct C {
-        int c{ 32 };
-        int pad{};
-        double d{ 3.0 };
-    };
-}
+#include "v12.0struct.h"
+#include "v12.1struct.h"
+#include "v12.2struct.h"
 
 int main()
 {
-    const auto b1 = v1::B{};
+    const auto b1 = v1201::B{};
     const auto formatted = std::format("v1::B: b = {:d}, f = {:.1f}", b1.b, b1.f);
     std::cout << formatted << "\n";
 
-    const auto c2 = v2::C{};
+    const auto c2 = v1202::C{};
     const auto formatted2 = std::format("v2::C: c = {:d}, pad = {:d}, d = {:.1f}", c2.c, c2.pad, c2.d);
     std::cout << formatted2 << "\n";
 }

@@ -143,6 +143,14 @@
   <ItemGroup>
     <ClCompile Include="CppConsoleApp.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="v12.0enum.h" />
+    <ClInclude Include="v12.0struct.h" />
+    <ClInclude Include="v12.1enum.h" />
+    <ClInclude Include="v12.1struct.h" />
+    <ClInclude Include="v12.2enum.h" />
+    <ClInclude Include="v12.2struct.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
