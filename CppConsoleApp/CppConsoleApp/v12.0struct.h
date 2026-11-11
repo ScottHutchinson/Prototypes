@@ -1,4 +1,5 @@
 #pragma once
+#include "v12.0enum.h"
 
 namespace v1200 {
 

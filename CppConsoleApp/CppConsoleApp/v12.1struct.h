@@ -1,5 +1,6 @@
 #pragma once
 #include "v12.0struct.h"
+#include "v12.1enum.h"
 
 namespace v1201 {
     using namespace v1200;
