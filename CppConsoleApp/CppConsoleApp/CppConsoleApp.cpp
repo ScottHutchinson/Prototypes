@@ -2,14 +2,15 @@
 //
 
 #include <iostream>
+#include <utility>
 #include "v12.0struct.h"
 #include "v12.1struct.h"
 #include "v12.2struct.h"
 
 int main() {
-    const auto e1 = static_cast<int>(v1201::B_E::b4);
-    const auto e2 = static_cast<int>(v1202::C_E::c4);
-    const auto e2d = static_cast<int>(v1202::D_E::d1);
+    const auto e1 = std::to_underlying(v1201::B_E::b4);
+    const auto e2 = std::to_underlying(v1202::C_E::c4);
+    const auto e2d = std::to_underlying(v1202::D_E::d1);
 
     const auto b1 = v1201::B{};
     const auto formatted = std::format("v1::B: b = {:d}, f = {:.1f}, e = {:d}", b1.b, b1.f, e1);
